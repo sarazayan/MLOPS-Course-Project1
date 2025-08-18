@@ -1,0 +1,128 @@
+/* Reset some basics */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+
+/* Container */
+.container {
+    background: #fff;
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    animation: fadeIn 1s ease-in-out;
+    text-align: center;
+}
+
+/* Heading */
+.container h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #444;
+    font-weight: 700;
+}
+
+/* Form groups */
+.form-group {
+    margin: 15px 0;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #555;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+/* Input hover and focus */
+input:focus, select:focus {
+    border-color: #6a11cb;
+    outline: none;
+    box-shadow: 0 0 6px rgba(106,17,203,0.5);
+}
+
+/* Button */
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+}
+
+/* Prediction result box */
+.result {
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    animation: popUp 0.8s ease;
+}
+
+.result p {
+    margin: 0;
+}
+
+/* Success / Cancel message */
+.result p:first-child {
+    color: #e63946;
+}
+
+.result p:last-child {
+    color: #2a9d8f;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popUp {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .container {
+        padding: 20px;
+    }
+    button {
+        width: 100%;
+    }
+}
